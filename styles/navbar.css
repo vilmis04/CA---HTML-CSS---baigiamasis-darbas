@@ -1,0 +1,87 @@
+.mobileMenu {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+  }
+
+.logo p {
+    font-family: var(--logoFont);
+    font-size: 3rem;
+    letter-spacing: -1.15rem;
+    margin: 0;
+    float: left;
+}
+
+.hamburger-menu {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+header {
+    width: 100vw;
+    padding-top: 0.25rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+header ul {
+    padding: 0;
+    list-style: none;
+}
+
+/* header li {
+    padding: 0;
+    margin: 0
+} */
+
+header a {
+    display: block;
+    text-decoration: none;
+    text-align: center;    
+    padding: 0.5rem;
+    color: black;
+    transition-duration: 400ms;
+    font-family: var(--generalFont);
+}
+
+header a:hover {
+   color: grey;
+   transform: translate(0.5rem);
+   transition-duration: 400ms;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: black 1px solid;
+}
+
+.navMenu {
+    height: 0;
+
+    background-color: white;
+    overflow: hidden;
+    border-bottom: transparent 1px solid;
+    transition: height 250ms ease-in-out, border-bottom 750ms;
+}
+
+.show-links {
+    height: calc(34px*4);
+    border-bottom: black 1px solid;
+
+}
+
+.navMenu,
+.show-links,
+nav {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* .navMenu,
+.show-links {
+
+} */
