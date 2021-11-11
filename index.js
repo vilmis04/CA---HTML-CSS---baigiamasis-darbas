@@ -3,4 +3,5 @@ const links = document.getElementById("navMenu");
 
 navBtn.addEventListener("click", function() {
     links.classList.toggle("show-links");
+    navBtn.classList.toggle("change");
 });
