@@ -6,6 +6,7 @@
 
 html {
     scroll-behavior: smooth;
+    box-sizing: border-box;
 }
 
 /* body {
@@ -14,8 +15,11 @@ html {
 
 .hero {
     height: 100vh;
-    /* height: calc(100vh-55px); */
     width: 100vw;
+    position: relative;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
 
     display: flex;
     justify-content: flex-start;
@@ -30,4 +34,5 @@ html {
     /* font-size: calc(32px +(96-32)*((100vw-320px)/(768-320))); */
     width: 60%;
     margin: 2rem;
+    margin-bottom: 4rem;
 }

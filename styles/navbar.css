@@ -27,7 +27,8 @@ header {
     left: 0;
     background-color: white;
     border-bottom: black 1px solid;
-    float: left;
+    /* float: left; */
+    z-index: 1;
 }
 
 header ul {
@@ -36,13 +37,14 @@ header ul {
 }
 
 header a {
+    color: black;
     display: block;
+    font-family: var(--generalFont);
+    font-size: 1.25rem;
+    padding: 0.5rem;
     text-decoration: none;
     text-align: center;    
-    padding: 0.5rem;
-    color: black;
     transition-duration: 400ms;
-    font-family: var(--generalFont);
 }
 
 header a:hover {
@@ -69,7 +71,7 @@ nav {
 }
 
 .show-links {
-    height: calc(34px*4);
+    height: calc(39px*4);
 
 }
 
