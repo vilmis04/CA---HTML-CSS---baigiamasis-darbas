@@ -27,6 +27,7 @@ header {
     left: 0;
     background-color: white;
     border-bottom: black 1px solid;
+    float: left;
 }
 
 header ul {
