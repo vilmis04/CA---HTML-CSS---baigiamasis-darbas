@@ -26,6 +26,7 @@ header {
     top: 0;
     left: 0;
     background-color: white;
+    border-bottom: black 1px solid;
 }
 
 header ul {
@@ -52,7 +53,9 @@ header a:hover {
 nav {
     display: flex;
     justify-content: space-between;
-    border-bottom: black 1px solid;
+    padding-left: 3rem;
+    padding-right: 2.5rem;
+
 }
 
 .navMenu {
@@ -66,14 +69,12 @@ nav {
 
 .show-links {
     height: calc(34px*4);
-    border-bottom: black 1px solid;
 
 }
 
 .navMenu,
 .show-links,
 nav {
-    width: 90%;
     margin: 0 auto;
 }
 
