@@ -1,0 +1,104 @@
+.mobileMenu {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+}
+
+.logo p {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 3rem;
+  letter-spacing: -1.15rem;
+  margin: 0;
+  float: left;
+}
+
+.hamburger-menu {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+header {
+  width: 100vw;
+  padding-top: 0.25rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  border-bottom: black 1px solid;
+  z-index: 1;
+}
+
+header ul {
+  padding: 0;
+  list-style: none;
+}
+
+header a {
+  color: black;
+  display: block;
+  font-family: "Lato", sans-serif;
+  font-size: 1.25rem;
+  padding: 0.5rem;
+  text-decoration: none;
+  text-align: center;
+  -webkit-transition-duration: 400ms;
+          transition-duration: 400ms;
+}
+
+header a:hover {
+  color: grey;
+  -webkit-transform: translate(0.5rem);
+          transform: translate(0.5rem);
+  -webkit-transition-duration: 400ms;
+          transition-duration: 400ms;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-left: 3rem;
+  padding-right: 2.5rem;
+}
+
+.navMenu {
+  height: 0;
+  background-color: white;
+  overflow: hidden;
+  border-bottom: transparent 1px solid;
+  -webkit-transition: height 250ms ease-in-out, border-bottom 750ms;
+  transition: height 250ms ease-in-out, border-bottom 750ms;
+}
+
+.show-links {
+  height: calc(39px*4);
+}
+
+.navMenu,
+.show-links,
+nav {
+  margin: 0 auto;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-8px, 6px);
+  transform: rotate(-45deg) translate(-8px, 6px);
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-9px, -8px);
+  transform: rotate(45deg) translate(-9px, -8px);
+}
+/*# sourceMappingURL=navbar.css.map */
