@@ -1,7 +1,4 @@
 @import "definitions";
-// @use "styles/definitions" as *;
-// $logoFont: 'Josefin Sans', sans-serif;
-// $generalFont: 'Lato', sans-serif;
 
 .mobileMenu {
     width: 35px;
@@ -33,29 +30,27 @@ header {
     background-color: white;
     border-bottom: black 1px solid;
     z-index: 1;
+    ul {
+        padding: 0;
+        list-style: none;
+    }
+    a {
+        color: black;
+        display: block;
+        font-family: $generalFont;
+        font-size: 1.25rem;
+        padding: 0.5rem;
+        text-decoration: none;
+        text-align: center;    
+        transition-duration: 400ms;
+    }
+    a:hover {
+        color: grey;
+        transform: translate(0.5rem);
+        transition-duration: 400ms;
+     }
 }
 
-header ul {
-    padding: 0;
-    list-style: none;
-}
-
-header a {
-    color: black;
-    display: block;
-    font-family: $generalFont;
-    font-size: 1.25rem;
-    padding: 0.5rem;
-    text-decoration: none;
-    text-align: center;    
-    transition-duration: 400ms;
-}
-
-header a:hover {
-   color: grey;
-   transform: translate(0.5rem);
-   transition-duration: 400ms;
-}
 
 nav {
     display: flex;

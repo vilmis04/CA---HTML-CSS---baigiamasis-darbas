@@ -6,10 +6,6 @@ html {
     box-sizing: border-box;
 }
 
-/* body {
-    
-} */
-
 .hero {
     height: 100vh;
     width: 100vw;
@@ -23,13 +19,13 @@ html {
     align-items: flex-end;
 
     background: hsl(0, 0%, 75%);
-}
 
-.hero h2 {
-    font-family: $generalFont;
-    font-size: 3rem;
-    /* font-size: calc(32px +(96-32)*((100vw-320px)/(768-320))); */
-    width: 60%;
-    margin: 2rem;
-    margin-bottom: 4rem;
+    h2 {
+        font-family: $generalFont;
+        font-size: 3rem;
+        /* font-size: calc(32px +(96-32)*((100vw-320px)/(768-320))); */
+        width: 60%;
+        margin: 2rem;
+        margin-bottom: 4rem;
+    }
 }
