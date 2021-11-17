@@ -1,3 +1,7 @@
+@use "src/styles/definitions" as *;
+// $logoFont: 'Josefin Sans', sans-serif;
+// $generalFont: 'Lato', sans-serif;
+
 .mobileMenu {
     width: 35px;
     height: 5px;
@@ -6,7 +10,7 @@
   }
 
 .logo p {
-    font-family: var(--logoFont);
+    font-family: $logoFont;
     font-size: 3rem;
     letter-spacing: -1.15rem;
     margin: 0;
@@ -38,7 +42,7 @@ header ul {
 header a {
     color: black;
     display: block;
-    font-family: var(--generalFont);
+    font-family: $generalFont;
     font-size: 1.25rem;
     padding: 0.5rem;
     text-decoration: none;
@@ -82,8 +86,8 @@ nav {
 
 /* Rotate first bar */
 .change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
-    transform: rotate(-45deg) translate(-9px, 6px);
+    -webkit-transform: rotate(-45deg) translate(-8px, 6px) ;
+    transform: rotate(-45deg) translate(-8px, 6px);
 }
   
   /* Fade out the second bar */
@@ -93,6 +97,6 @@ nav {
   
   /* Rotate last bar */
 .change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
-    transform: rotate(45deg) translate(-8px, -8px);
+    -webkit-transform: rotate(45deg) translate(-9px, -8px) ;
+    transform: rotate(45deg) translate(-9px, -8px);
 }
