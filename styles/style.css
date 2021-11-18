@@ -6,12 +6,7 @@ html {
 
 .hero {
   height: 100vh;
-  width: 100vw;
-  position: relative;
-  top: 0;
-  left: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -21,15 +16,95 @@ html {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  background: #bfbfbf;
+  background-image: url("/images/mobile-hero-bg.jpg");
+  background-size: cover;
 }
 
-.hero h2 {
-  font-family: "Lato", sans-serif;
-  font-size: 3rem;
-  /* font-size: calc(32px +(96-32)*((100vw-320px)/(768-320))); */
-  width: 60%;
+.hero div {
   margin: 2rem;
-  margin-bottom: 4rem;
+  margin-bottom: 6rem;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+}
+
+.hero div h2 {
+  color: #0A1F23;
+  font-size: 2rem;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 3rem;
+  margin: 0.25rem 0;
+  display: inline;
+  /* font-size: calc(32px +(96-32)*((100vw-320px)/(768-320))); */
+  background-color: white;
+  padding: 0 0.5rem;
+}
+
+.projects {
+  background: #658095;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.projects h1 {
+  color: #0A1F23;
+  font-size: 2rem;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  margin: 0 auto 1rem;
+}
+
+.projects .projectContainer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.projects .projectContainer .project-card {
+  width: 80%;
+  margin: 0 auto;
+  border: 1px solid #0A1F23;
+}
+
+.projects .projectContainer .project-card a {
+  text-decoration: none;
+}
+
+.projects .projectContainer .project-card a img {
+  width: 100%;
+  border-bottom: 1px solid #0A1F23;
+}
+
+.projects .projectContainer .project-card a .title-box {
+  margin: 0;
+  background: #BFA985;
+}
+
+.projects .projectContainer .project-card a .title-box h3 {
+  color: #0A1F23;
+  font-size: 1rem;
+  font-family: "Lato", sans-serif;
+  margin: 0 auto;
+  padding: 1rem 0;
+  font-size: 1.25rem;
+}
+
+.projects .projectContainer .project-card a .title-box h3 .project-title-decor {
+  color: #880f0a;
+}
+
+.projects .projectContainer .project-card a .title-box h3 .show-decor {
+  color: #880f0a;
 }
 /*# sourceMappingURL=style.css.map */

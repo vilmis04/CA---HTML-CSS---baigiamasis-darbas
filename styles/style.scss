@@ -1,5 +1,17 @@
 @import "definitions";
+$textColor: $firefly;
 
+@mixin generalTitle {
+    color: $textColor;
+    font-size: 2rem;
+    font-family: $generalFont;
+    font-weight: bold;
+}
+@mixin generalText {
+    color: $textColor;
+    font-size: 1rem;
+    font-family: $generalFont;
+}
 
 html {
     scroll-behavior: smooth;
@@ -8,24 +20,83 @@ html {
 
 .hero {
     height: 100vh;
-    width: 100vw;
-    position: relative;
-    top: 0;
-    left: 0;
-    box-sizing: border-box;
+    width: 100%;
+    // position: relative;
+    // top: 0;
+    // left: 0;
 
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
 
-    background: hsl(0, 0%, 75%);
+    // background: hsl(0, 0%, 75%);
+    background-image: url("/images/mobile-hero-bg.jpg");
+    background-size: cover;
 
-    h2 {
-        font-family: $generalFont;
-        font-size: 3rem;
-        /* font-size: calc(32px +(96-32)*((100vw-320px)/(768-320))); */
-        width: 60%;
+    div {
         margin: 2rem;
-        margin-bottom: 4rem;
+        margin-bottom: 6rem;
+        height: auto;
+        display: flex;
+        flex-flow: column nowrap;
+        h2 {
+            @include generalTitle;
+            width: fit-content;
+            font-size: 3rem;
+            margin: 0.25rem 0;
+            display: inline;
+            /* font-size: calc(32px +(96-32)*((100vw-320px)/(768-320))); */
+            background-color: white;
+            padding: 0 0.5rem;
+        }
+    }
+}
+
+.projects {
+    background: $lynch;
+    padding: 2rem 0;
+    text-align: center;
+    h1 {
+        @include generalTitle;
+        margin: 0 auto 1rem;
+        // padding-top: ;
+
+    }
+    .projectContainer {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        .project-card {
+            width: 80%;
+            margin: 0 auto;
+            border: 1px solid $firefly;
+            a {
+                text-decoration: none;
+                img {
+                    width: 100%;
+                    border-bottom: 1px solid $firefly;
+                }
+                .title-box {
+                    margin: 0;
+                    background: $indianKhaki;
+                    // border: 1px solid red;
+                    // height: 100%;
+                    h3 {
+                        @include generalText;
+                        margin: 0 auto;
+                        padding: 1rem 0;
+                        font-size: 1.25rem;
+                        .project-title-decor {
+                            color: #880f0a;
+// in bigger screen, change to disappear on hover
+                        }
+                        .show-decor {
+                            color: #880f0a;
+                        }
+                    }
+                
+                }
+            }
+        }
     }
 }

@@ -1,16 +1,8 @@
 .mobileMenu {
   width: 35px;
   height: 5px;
-  background-color: black;
+  background-color: #0A1F23;
   margin: 6px 0;
-}
-
-.logo p {
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 3rem;
-  letter-spacing: -1.15rem;
-  margin: 0;
-  float: left;
 }
 
 .hamburger-menu {
@@ -20,14 +12,44 @@
 }
 
 header {
-  width: 100vw;
   padding-top: 0.25rem;
   position: fixed;
   top: 0;
   left: 0;
-  background-color: white;
-  border-bottom: black 1px solid;
+  right: 0;
+  background-color: #778D98;
+  border-bottom: #0A1F23 1px solid;
   z-index: 1;
+}
+
+header nav {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 3rem;
+  padding-right: 2.5rem;
+}
+
+header nav .logo {
+  -webkit-transform: translateY(4px);
+          transform: translateY(4px);
+}
+
+header nav .logo p {
+  color: #0A1F23;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 3rem;
+  letter-spacing: -1.15rem;
+  margin: 0;
+  float: left;
 }
 
 header ul {
@@ -35,8 +57,9 @@ header ul {
   list-style: none;
 }
 
-header a {
-  color: black;
+header ul li a {
+  color: #0A1F23;
+  font-weight: bold;
   display: block;
   font-family: "Lato", sans-serif;
   font-size: 1.25rem;
@@ -47,28 +70,14 @@ header a {
           transition-duration: 400ms;
 }
 
-header a:hover {
-  color: grey;
-  -webkit-transform: translate(0.5rem);
-          transform: translate(0.5rem);
-  -webkit-transition-duration: 400ms;
-          transition-duration: 400ms;
-}
-
-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding-left: 3rem;
-  padding-right: 2.5rem;
+header ul li a:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .navMenu {
   height: 0;
-  background-color: white;
+  background-color: #778D98;
   overflow: hidden;
   border-bottom: transparent 1px solid;
   -webkit-transition: height 250ms ease-in-out, border-bottom 750ms;
@@ -76,7 +85,7 @@ nav {
 }
 
 .show-links {
-  height: calc(39px*4);
+  height: calc(39px*3);
 }
 
 .navMenu,
