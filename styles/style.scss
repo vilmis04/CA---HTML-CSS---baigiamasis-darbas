@@ -1,5 +1,6 @@
 @import "definitions";
 $textColor: $firefly;
+$altTextColor: $indianKhaki;
 
 @mixin generalTitle {
     color: $textColor;
@@ -9,7 +10,7 @@ $textColor: $firefly;
 }
 @mixin generalText {
     color: $textColor;
-    font-size: 1rem;
+    font-size: 1.25rem;
     font-family: $generalFont;
 }
 
@@ -35,7 +36,7 @@ html {
 
     div {
         margin: 2rem;
-        margin-bottom: 6rem;
+        margin-bottom: 8rem;
         height: auto;
         display: flex;
         flex-flow: column nowrap;
@@ -83,9 +84,8 @@ html {
                     // height: 100%;
                     h3 {
                         @include generalText;
-                        margin: 0 auto;
+                        margin: -4px auto 0;
                         padding: 1rem 0;
-                        font-size: 1.25rem;
                         .project-title-decor {
                             color: #880f0a;
 // in bigger screen, change to disappear on hover
@@ -98,5 +98,37 @@ html {
                 }
             }
         }
+    }
+}
+
+.about {
+    background: $firefly;
+    padding: 2rem 0;
+    text-align: center;
+    h1 {
+        @include generalTitle;
+        color: $altTextColor;
+        margin: 0 auto 1rem;
+    }
+    p {
+        @include generalText;
+        color: $altTextColor;
+        width: 80%;
+        margin: 0 auto;
+    }
+    button {
+        @include generalText;
+        color: $altTextColor;
+        background: transparent;
+        padding: 0.5rem 1rem;
+        margin: 2rem 1rem 1rem;
+        box-shadow: none;
+        border-radius: 21rem;
+        border: $altTextColor 3px solid;
+        cursor: pointer;
+    }
+    button:hover {
+        background: $altTextColor;
+        color: $firefly;
     }
 }
