@@ -109,13 +109,15 @@ html {
 }
 
 .about {
-    background: $firefly;
+    background: white;
     @include sectionTopPadding;
-    text-align: center;
+
+    // text-align: center;
     h1 {
         @include generalTitle;
-        color: $altTextColor;
+        color: $textColor;
         margin: 0 auto 4rem;
+        text-align: center;
     }
 
     .picture {
@@ -123,34 +125,42 @@ html {
         aspect-ratio: 1;
         border-radius: 50%;
         margin: 0 auto 3rem;
-        border: 3px solid $altTextColor;
+        border: 1px solid $textColor;
 
         background-image: url("/images/me-pic.jpg");
         background-size: cover;
         background-position: 50% 50%;
 
     }
-    p {
-        @include generalText;
-        color: $altTextColor;
-        width: 80%;
-        margin: 0 auto;
+    .divider {
+        display: flex;
+        flex-direction: column;
+        p {
+            @include generalText;
+            color: $textColor;
+            width: 80%;
+            margin: 0 auto;
+        }
+        a {
+            @include generalText;
+            
+            align-self: center;
+            background: transparent;
+            padding: 0.5rem 1rem;
+            margin: 2rem auto;
+            box-shadow: none;
+            border-radius: 21rem;
+            border: $textColor 1px solid;
+            cursor: pointer;
+            color: $textColor;
+            text-decoration: none;
+        }
+        a:hover {
+            background: $textColor;
+            color: white;
+        }
     }
-    button {
-        @include generalText;
-        color: $altTextColor;
-        background: transparent;
-        padding: 0.5rem 1rem;
-        margin: 2rem 1rem 1rem;
-        box-shadow: none;
-        border-radius: 21rem;
-        border: $altTextColor 3px solid;
-        cursor: pointer;
-    }
-    button:hover {
-        background: $altTextColor;
-        color: $firefly;
-    }
+    
 }
 
 .contacts {
@@ -180,11 +190,16 @@ html {
 
     .contact-icons {
         width: 80%;
-        margin: 0 auto;
+        margin: 0 auto 3rem;
 
         display: flex;
         justify-content: space-around;
         font-size: 3rem;
+
+        a {
+            color: $textColor;
+
+        }
 
         // .fa-linkedin:hover {
         //     color: blue;
@@ -194,12 +209,20 @@ html {
 }
 
 footer {
-    background: $slateGray;
+    background: white;
     font-family: $generalFont;
     padding: 0.5rem;
     text-align: center;
     
     p {
         margin: 0;
+    }
+}
+
+@media screen and (min-width: 425px) {
+    .hero {
+        background-image: url("/images/hero-animation.gif");
+        background-size: cover;
+        background-position: 50% 50%;
     }
 }
