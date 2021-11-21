@@ -7,6 +7,7 @@ html {
 .hero {
   height: 100vh;
   width: 100%;
+  padding-top: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -51,7 +52,7 @@ html {
 
 .projects {
   background: #658095;
-  padding: 2rem 0;
+  padding: 5rem 0 2rem;
   text-align: center;
 }
 
@@ -61,6 +62,7 @@ html {
   font-family: "Lato", sans-serif;
   font-weight: bold;
   margin: 0 auto 1rem;
+  margin-bottom: 4rem;
 }
 
 .projects .projectContainer {
@@ -109,7 +111,7 @@ html {
 
 .about {
   background: #0A1F23;
-  padding: 2rem 0;
+  padding: 5rem 0 2rem;
   text-align: center;
 }
 
@@ -119,7 +121,18 @@ html {
   font-family: "Lato", sans-serif;
   font-weight: bold;
   color: #BFA985;
-  margin: 0 auto 1rem;
+  margin: 0 auto 4rem;
+}
+
+.about .picture {
+  width: 80%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  margin: 0 auto 3rem;
+  border: 3px solid #BFA985;
+  background-image: url("/images/me-pic.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
 }
 
 .about p {
@@ -149,5 +162,61 @@ html {
 .about button:hover {
   background: #BFA985;
   color: #0A1F23;
+}
+
+.contacts {
+  padding: 5rem 0 2rem;
+  background: #658095;
+  width: 100%;
+}
+
+.contacts .container {
+  margin: 2rem;
+  margin-bottom: 5rem;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contacts .container h2 {
+  color: #0A1F23;
+  font-size: 2rem;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 3rem;
+  margin: 0.25rem 2rem;
+  display: inline;
+  /* font-size: calc(32px +(96-32)*((100vw-320px)/(768-320))); */
+  background-color: white;
+  padding: 0 2rem;
+}
+
+.contacts .contact-icons {
+  width: 80%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: 3rem;
+}
+
+footer {
+  background: #778D98;
+  font-family: "Lato", sans-serif;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
 }
 /*# sourceMappingURL=style.css.map */

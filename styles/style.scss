@@ -14,14 +14,20 @@ $altTextColor: $indianKhaki;
     font-family: $generalFont;
 }
 
+@mixin sectionTopPadding {
+    padding: 5rem 0 2rem;
+}
+
 html {
     scroll-behavior: smooth;
     box-sizing: border-box;
 }
 
+
 .hero {
     height: 100vh;
     width: 100%;
+    padding-top: 3rem;  
     // position: relative;
     // top: 0;
     // left: 0;
@@ -55,11 +61,12 @@ html {
 
 .projects {
     background: $lynch;
-    padding: 2rem 0;
+    @include sectionTopPadding;
     text-align: center;
     h1 {
         @include generalTitle;
         margin: 0 auto 1rem;
+        margin-bottom: 4rem;
         // padding-top: ;
 
     }
@@ -103,12 +110,25 @@ html {
 
 .about {
     background: $firefly;
-    padding: 2rem 0;
+    @include sectionTopPadding;
     text-align: center;
     h1 {
         @include generalTitle;
         color: $altTextColor;
-        margin: 0 auto 1rem;
+        margin: 0 auto 4rem;
+    }
+
+    .picture {
+        width: 80%;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        margin: 0 auto 3rem;
+        border: 3px solid $altTextColor;
+
+        background-image: url("/images/me-pic.jpg");
+        background-size: cover;
+        background-position: 50% 50%;
+
     }
     p {
         @include generalText;
@@ -130,5 +150,56 @@ html {
     button:hover {
         background: $altTextColor;
         color: $firefly;
+    }
+}
+
+.contacts {
+    @include sectionTopPadding;
+    background: $lynch;
+    // height: 100vh;
+    width: 100%;
+
+    .container {
+        margin: 2rem;
+        margin-bottom: 5rem;
+        height: auto;
+        display: flex;
+        // flex-flow: column nowrap;
+        justify-content: center;
+        h2 {
+            @include generalTitle;
+            width: fit-content;
+            font-size: 3rem;
+            margin: 0.25rem 2rem;
+            display: inline;
+            /* font-size: calc(32px +(96-32)*((100vw-320px)/(768-320))); */
+            background-color: white;
+            padding: 0 2rem;
+        }
+    }
+
+    .contact-icons {
+        width: 80%;
+        margin: 0 auto;
+
+        display: flex;
+        justify-content: space-around;
+        font-size: 3rem;
+
+        // .fa-linkedin:hover {
+        //     color: blue;
+        // }
+    }
+    
+}
+
+footer {
+    background: $slateGray;
+    font-family: $generalFont;
+    padding: 0.5rem;
+    text-align: center;
+    
+    p {
+        margin: 0;
     }
 }
