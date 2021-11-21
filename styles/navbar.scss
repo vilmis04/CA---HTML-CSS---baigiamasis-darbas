@@ -1,22 +1,8 @@
 @import "definitions";
 $navbarColor: white;
-// $navbarHeight: ;
-
-.mobileMenu {
-    width: 35px;
-    height: 5px;
-    background-color: $firefly;
-    margin: 6px 0;
-  }
-
-.hamburger-menu {
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-}
+$numberOfSections: 3;
 
 header {
-        // width: 100vw;
     padding-top: 0.25rem;
     position: fixed;
     top: 0;
@@ -26,69 +12,97 @@ header {
     border-bottom: $firefly 1px solid;
     z-index: 1;   
     nav {
+        max-width: 768px;
         box-sizing: border-box;
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding-left: 3rem;
         padding-right: 2.5rem;
+        margin: 0 auto;
         .logo {
             transform: translateY(4px);
-            p {
-                color: $firefly;
-                font-family: $logoFont;
-                font-size: 3rem;
-                letter-spacing: -1.15rem;
-                margin: 0;
-                float: left;
-            }
-        }
-    }
-    ul {
-        padding: 0;
-        list-style: none;
-        li {
             a {
-                color: $firefly;
-                font-weight: bold;
-                display: block;
-                font-family: $generalFont;
-                font-size: 1.25rem;
-                padding: 0.5rem;
                 text-decoration: none;
-                text-align: center;    
-                transition-duration: 400ms;
+                p {
+                    color: $firefly;
+                    font-family: $logoFont;
+                    font-size: 3rem;
+                    letter-spacing: -1.15rem;
+                    margin: 0;
+                }  
             }
-            a:hover {
-                // color: grey;
-                // transform: translate(0.5rem);
-                // transition-duration: 400ms;
-                transform: scale(1.1);
-            }    
+            
+        }
+        .navMenu {
+            background-color: $navbarColor;
+            overflow: hidden;
+            transition: height 250ms ease-in-out;
+            padding: 0;
+            list-style: none;
+            margin: 0;
+
+            @include breakpoint(mobileonly) {
+            position: fixed;
+            top: 55px;
+            left:0;
+            right:0;
+            height: 0;    
+            }
+            @include breakpoint(tablet) {
+                display: flex;
+                height: 100%;
+                justify-self: flex-end;
+            }
+
+  
+
+            li {
+                a {
+                    color: $firefly;
+                    font-weight: bold;
+                    display: block;
+                    font-family: $generalFont;
+                    font-size: 1.25rem;
+                    padding: 0.5rem;
+                    text-decoration: none;
+                    text-align: center;    
+                    transition-duration: 400ms;
+                }
+                a:hover {
+                    transform: scale(1.1);
+                }    
+            }
+        }
+        .show-links {
+            height: calc(39px*3);
+            border-bottom: 1px solid $firefly;
+
+
+            @include breakpoint(mobileonly) {
+                margin: 0 auto;
+            }
+            @include breakpoint(tablet) {
+                height: auto;
+                border-bottom: none;
+            }
+        }
+        .hamburger-menu {
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+
+            @include breakpoint(tablet) {
+                display: none;
+            }
+            .mobileMenu {
+                width: 35px;
+                height: 5px;
+                background-color: $firefly;
+                margin: 6px 0;
+            }
         }
     }
-    
-}
-
-.navMenu {
-    height: 0;
-
-    background-color: $navbarColor;
-    overflow: hidden;
-    border-bottom: transparent 1px solid;
-    transition: height 250ms ease-in-out, border-bottom 750ms;
-}
-
-.show-links {
-    // number of sections in the navbar
-    height: calc(39px*3);
-
-}
-
-.navMenu,
-.show-links,
-nav {
-    margin: 0 auto;
 }
 
 /* Rotate first bar */
@@ -106,27 +120,4 @@ nav {
 .change .bar3 {
     -webkit-transform: rotate(45deg) translate(-9px, -8px) ;
     transform: rotate(45deg) translate(-9px, -8px);
-}
-
-@media screen and (min-width: 425px) {
-    .hamburger-menu{
-        display: none;
-    }
-    .navMenu {
-        height: auto;
-        float: right;
-        display: inline-flex;
-        position: absolute;
-        top:0;
-        right:3rem;
-        height: 100%;
-        a {
-            height: 100%;
-            display: flex;
-            align-items: center;
-        }
-
-    }
-
-
 }

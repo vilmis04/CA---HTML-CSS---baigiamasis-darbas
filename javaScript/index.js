@@ -14,5 +14,5 @@ function closeMenu() {
 }
 
 navBtn.addEventListener("click", toggleMenu);
-navItems.forEach(item => item.addEventListener("click", toggleMenu));
+navItems.forEach(item => item.addEventListener("click", closeMenu));
 freeScreen.forEach(item => item.addEventListener("click", closeMenu));

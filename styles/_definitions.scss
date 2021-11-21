@@ -7,3 +7,18 @@ $firefly: #0A1F23;
 $indianKhaki: #BFA985;
 $slateGray: #778D98;
 $lynch: #658095;
+
+@mixin breakpoint($point) {
+    @if $point == desktop {
+      @media (min-width: 1024px) { @content ; }
+   }
+    @else if $point == laptop {
+      @media (min-width: 769px) { @content ; }
+   }
+     @else if $point == tablet {
+      @media (min-width: 426px) { @content ; }
+   }
+   @else if $point == mobileonly {
+      @media (max-width: 425px)  { @content ; }
+   }
+ }
