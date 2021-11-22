@@ -176,9 +176,6 @@ html {
 .projects .projectContainer .project-card a .title-box {
   margin: 0;
   background: #BFA985;
-}
-
-.projects .projectContainer .project-card a .title-box h3 {
   color: #0A1F23;
   font-size: 1.25rem;
   font-family: "Lato", sans-serif;
@@ -186,12 +183,10 @@ html {
   padding: 1rem 0;
 }
 
-.projects .projectContainer .project-card a .title-box h3 .project-title-decor {
+.projects .projectContainer .project-card a .title-box .project-title-decor {
   color: transparent;
-}
-
-.projects .projectContainer .project-card a .title-box h3 .show-decor {
-  color: #880f0a;
+  -webkit-transition: 200ms;
+  transition: 200ms;
 }
 
 .projects .projectContainer .project-card a:hover .project-title-decor {
