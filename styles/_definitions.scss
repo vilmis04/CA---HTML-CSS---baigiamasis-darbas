@@ -9,16 +9,19 @@ $slateGray: #778D98;
 $lynch: #658095;
 
 @mixin breakpoint($point) {
-    @if $point == desktop {
+    @if $point == wide {
+      @media (min-width: 1200px) { @content ; }
+   }
+    @else if $point == desktop {
       @media (min-width: 1024px) { @content ; }
    }
     @else if $point == laptop {
       @media (min-width: 769px) { @content ; }
    }
      @else if $point == tablet {
-      @media (min-width: 426px) { @content ; }
+      @media (min-width: 480px) { @content ; }
    }
    @else if $point == mobileonly {
-      @media (max-width: 425px)  { @content ; }
+      @media (max-width: 479px)  { @content ; }
    }
  }

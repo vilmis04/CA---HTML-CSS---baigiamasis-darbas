@@ -12,7 +12,7 @@ header {
     border-bottom: $firefly 1px solid;
     z-index: 1;   
     nav {
-        max-width: 768px;
+        max-width: 1200px;
         box-sizing: border-box;
         display: flex;
         justify-content: space-between;
@@ -20,6 +20,9 @@ header {
         padding-left: 3rem;
         padding-right: 2.5rem;
         margin: 0 auto;
+        // @include breakpoint(desktop) {
+        //     max-width: 1200px;
+        // }
         .logo {
             transform: translateY(4px);
             a {
@@ -43,19 +46,18 @@ header {
             margin: 0;
 
             @include breakpoint(mobileonly) {
-            position: fixed;
-            top: 55px;
-            left:0;
-            right:0;
-            height: 0;    
+                position: fixed;
+                top: 55px;
+                left:0;
+                right:0;
+                height: 0;    
             }
             @include breakpoint(tablet) {
                 display: flex;
                 height: 100%;
                 justify-self: flex-end;
             }
-
-  
+           
 
             li {
                 a {
