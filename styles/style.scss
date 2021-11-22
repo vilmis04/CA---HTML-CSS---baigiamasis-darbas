@@ -48,7 +48,7 @@ html {
         justify-content: center;
         align-items: center;
     }
-    
+
     background-image: url("/images/mobile-hero-bg.jpg");
     background-size: cover;
 
@@ -84,6 +84,7 @@ html {
 .projects {
     background: $lynch;
     @include sectionTopPadding;
+    padding-bottom: 5rem;
     text-align: center;
     h1 {
         @include generalTitle;
@@ -206,6 +207,7 @@ html {
                 cursor: pointer;
                 color: $textColor;
                 text-decoration: none;
+                transition: 200ms;
             }
             a:hover {
                 background: $textColor;
@@ -247,8 +249,11 @@ html {
         justify-content: space-around;
         font-size: 3rem;
 
-        a {
+        .fa-linkedin,
+        .fa-github-square,
+        .fa-at {
             color: $textColor;
+            transition: 200ms;
         }
         .fa-linkedin:hover {
             color: #0072B1;

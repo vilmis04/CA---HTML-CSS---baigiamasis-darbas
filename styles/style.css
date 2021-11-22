@@ -103,6 +103,7 @@ html {
 .projects {
   background: #658095;
   padding: 5rem 0 2rem;
+  padding-bottom: 5rem;
   text-align: center;
 }
 
@@ -298,6 +299,8 @@ html {
   cursor: pointer;
   color: #0A1F23;
   text-decoration: none;
+  -webkit-transition: 200ms;
+  transition: 200ms;
 }
 
 .about .container .divider a:hover {
@@ -350,8 +353,12 @@ html {
   font-size: 3rem;
 }
 
-.contacts .contact-icons a {
+.contacts .contact-icons .fa-linkedin,
+.contacts .contact-icons .fa-github-square,
+.contacts .contact-icons .fa-at {
   color: #0A1F23;
+  -webkit-transition: 200ms;
+  transition: 200ms;
 }
 
 .contacts .contact-icons .fa-linkedin:hover {
