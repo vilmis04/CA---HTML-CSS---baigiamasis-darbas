@@ -44,6 +44,19 @@ header nav .logo a p {
   margin: 0;
 }
 
+header nav .logo a p span {
+  width: -10px;
+  height: 0;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  color: transparent;
+}
+
+header nav .logo a p:hover span {
+  width: 100px;
+}
+
 header nav .navMenu {
   background-color: white;
   overflow: hidden;
